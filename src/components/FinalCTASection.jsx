@@ -23,7 +23,15 @@ export const FinalCTASection = () => {
         {/* Conteúdo Central em Destaque */}
         <div className="final-cta-content">
           <h2 className="final-cta-headline">
-            {locale === 'pt' ? 'Escale seu time, alcance seu sonho.' : 'Scale your team, achieve your dream.'}
+            {locale === 'pt' ? (
+              <>
+                <span>Escale seu time,</span> <span className="nowrap-phrase">alcance seu sonho.</span>
+              </>
+            ) : (
+              <>
+                <span>Scale your team,</span> <span className="nowrap-phrase">achieve your dream.</span>
+              </>
+            )}
           </h2>
 
           <p className="final-cta-subhead">

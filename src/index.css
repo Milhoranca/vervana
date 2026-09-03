@@ -845,27 +845,53 @@ p {
 }
 
 .btn-variant-secondary {
-  background: rgba(255, 255, 255, 0.05);
-  color: #FEFEFE;
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(16, 24, 32, 0.05);
+  color: #101820;
+  border: 1px solid rgba(16, 24, 32, 0.16);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
 .btn-variant-secondary .btn-icon-badge {
+  background: rgba(16, 24, 32, 0.08);
+  border: 1px solid rgba(16, 24, 32, 0.14);
+  color: #101820;
+}
+
+.btn-variant-secondary:hover {
+  background: rgba(16, 24, 32, 0.09);
+  border-color: rgba(16, 24, 32, 0.35);
+  color: #003740;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.btn-variant-secondary:hover .btn-icon-badge {
+  background: #003740;
+  border-color: #003740;
+  color: #9AFF1C;
+}
+
+:root[data-theme="dark"] .btn-variant-secondary {
+  background: rgba(255, 255, 255, 0.06);
+  color: #FEFEFE;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme="dark"] .btn-variant-secondary .btn-icon-badge {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.18);
   color: #FEFEFE;
 }
 
-.btn-variant-secondary:hover {
+:root[data-theme="dark"] .btn-variant-secondary:hover {
   background: rgba(255, 255, 255, 0.12);
   border-color: rgba(255, 255, 255, 0.45);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.btn-variant-secondary:hover .btn-icon-badge {
+:root[data-theme="dark"] .btn-variant-secondary:hover .btn-icon-badge {
   background: #9AFF1C;
   border-color: #9AFF1C;
   color: #003740;
@@ -1123,7 +1149,7 @@ p {
    ========================================================================== */
 .bento-showcase-section {
   background: #FFFFFF;
-  padding: 130px 0 150px 0;
+  padding: 80px 0 90px 0;
   position: relative;
   z-index: 10;
   overflow: hidden;
@@ -2229,7 +2255,7 @@ p {
    ========================================================================== */
 .methodology-section-light {
   background: #FFFFFF;
-  padding: 140px 0 160px 0;
+  padding: 75px 0 80px 0;
   position: relative;
   overflow: hidden;
   color: #101820;
@@ -2294,9 +2320,9 @@ p {
   overflow: hidden;
   box-sizing: border-box;
   cursor: pointer;
-  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 700ms cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 950ms cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 950ms cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 950ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* Camada de Fundo que Sobe de Baixo para Cima */
@@ -2306,7 +2332,7 @@ p {
   inset: 0;
   background: #003740;
   transform: translateY(100%);
-  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 950ms cubic-bezier(0.22, 1, 0.36, 1);
   z-index: 1;
   pointer-events: none;
   border-radius: 20px;
@@ -2343,10 +2369,10 @@ p {
   color: #101820;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.03);
-  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1), 
-              color 500ms cubic-bezier(0.16, 1, 0.3, 1), 
-              background-color 500ms cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 850ms cubic-bezier(0.22, 1, 0.36, 1), 
+              color 650ms cubic-bezier(0.22, 1, 0.36, 1) 80ms, 
+              background-color 650ms cubic-bezier(0.22, 1, 0.36, 1) 80ms,
+              box-shadow 850ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .methodology-card-light:hover .card-icon-box-light {
@@ -2376,7 +2402,7 @@ p {
   color: #101820;
   line-height: 1.25;
   margin: 0;
-  transition: color 550ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: color 750ms cubic-bezier(0.22, 1, 0.36, 1) 80ms;
 }
 
 .methodology-card-light:hover .card-statement-title {
@@ -2389,7 +2415,7 @@ p {
   line-height: 1.55;
   color: #4B5563;
   margin: 0;
-  transition: color 550ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: color 750ms cubic-bezier(0.22, 1, 0.36, 1) 100ms;
 }
 
 .methodology-card-light:hover .card-statement-desc {
@@ -2471,7 +2497,7 @@ p {
    ========================================================================== */
 .workspace-section {
   background: var(--vv-bg, #F5F6F8);
-  padding: 130px 0 150px 0;
+  padding: 70px 0 90px 0;
   position: relative;
   overflow: hidden;
   color: #101820;
@@ -3243,7 +3269,7 @@ p {
    ========================================================================== */
 .apple-founder-section {
   background: #FFFFFF;
-  padding: clamp(110px, 13vw, 170px) 0;
+  padding: clamp(70px, 8vw, 100px) 0;
   position: relative;
   overflow: hidden;
   color: #101820;
@@ -3804,10 +3830,39 @@ p {
 .metaview-cases-section {
   background: #041113;
   color: #FFFFFF;
-  padding: clamp(90px, 10vw, 140px) 0;
+  padding: clamp(70px, 8vw, 100px) 0;
   position: relative;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Brandbook Signature Illuminated Chevron Logo Backdrop (Lado Direito) */
+.cases-brand-bloom-frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: clamp(480px, 52vw, 840px);
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cases-brand-bloom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+  opacity: 0.75;
+  mix-blend-mode: screen;
+}
+
+.cases-brand-bloom-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #041113 0%, rgba(4, 17, 19, 0.4) 40%, transparent 80%);
 }
 
 .cases-container {
@@ -4151,16 +4206,19 @@ p {
   }
 }
 
-
 /* ==========================================================================
-   SEÇÃO FINAL CTA (100% Full-Width Edge-to-Edge Background & Hero Button)
+   SEÇÃO FINAL CTA (Majestic Mountain Monolith, Edge-to-Edge & High Contrast)
    ========================================================================== */
 .final-cta-section {
   position: relative;
   overflow: hidden;
   width: 100%;
-  background: #FFFFFF;
-  padding: clamp(100px, 12vw, 170px) 0 80px 0;
+  background: #030303;
+  min-height: clamp(620px, 80vh, 900px);
+  padding: clamp(130px, 15vw, 210px) 0 clamp(80px, 10vw, 140px) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   box-sizing: border-box;
 }
@@ -4181,20 +4239,15 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center bottom;
+  object-position: center 38%;
   display: block;
+  transform: scale(1.03);
 }
 
 .final-cta-mist-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg, 
-    #FFFFFF 0%, 
-    rgba(255, 255, 255, 0.94) 30%, 
-    rgba(255, 255, 255, 0.45) 65%, 
-    rgba(255, 255, 255, 0.1) 100%
-  );
+  background: rgba(4, 12, 14, 0.62);
 }
 
 .final-cta-bottom-vignette {
@@ -4202,8 +4255,8 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 90px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.6) 0%, transparent 100%);
+  height: 100px;
+  background: linear-gradient(0deg, rgba(3, 3, 3, 0.8) 0%, transparent 100%);
 }
 
 .final-cta-container {
@@ -4218,25 +4271,35 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .final-cta-headline {
   font-family: var(--vv-font-display, 'Space Grotesk', sans-serif);
-  font-size: clamp(2.6rem, 4.8vw, 4.4rem);
+  font-size: clamp(2.8rem, 5.2vw, 4.8rem);
   font-weight: 600;
-  color: #101820;
+  color: #FEFEFE;
   letter-spacing: -0.04em;
-  line-height: 1.06;
-  margin: 0 0 18px 0;
+  line-height: 1.08;
+  margin: 0 0 20px 0;
+  max-width: 860px;
+  text-wrap: balance;
+  text-shadow: 0 4px 28px rgba(0, 0, 0, 0.95), 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.nowrap-phrase {
+  white-space: nowrap;
 }
 
 .final-cta-subhead {
   font-family: var(--vv-font-body, 'Inter', sans-serif);
-  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
   line-height: 1.6;
-  color: #4B5563;
-  max-width: 600px;
-  margin: 0 0 32px 0;
+  color: #E2E8F0;
+  font-weight: 400;
+  max-width: 680px;
+  margin: 0 0 36px 0;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.95);
 }
 
 .final-cta-action-wrap {
@@ -4245,6 +4308,7 @@ p {
 
 .final-cta-hero-btn {
   margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(154, 255, 28, 0.35);
 }
 
 

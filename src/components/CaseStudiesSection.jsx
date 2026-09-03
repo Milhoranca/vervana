@@ -7,6 +7,16 @@ export const CaseStudiesSection = () => {
 
   return (
     <section className="metaview-cases-section" id="case-studies" data-dark="true">
+      {/* Brandbook Signature Illuminated Chevron Logo Backdrop (Lado Direito) */}
+      <div className="cases-brand-bloom-frame" aria-hidden="true">
+        <img 
+          src="/brand/vervana_dark_bloom_logo.jpg" 
+          alt="" 
+          className="cases-brand-bloom-img" 
+        />
+        <div className="cases-brand-bloom-fade" />
+      </div>
+
       <div className="cases-container">
         
         {/* ========================================================

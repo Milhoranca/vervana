@@ -110,6 +110,9 @@ export const MethodologySection = () => {
 
   return (
     <section className="methodology-section-light" id="methodology" ref={sectionRef}>
+      {/* Brand Chevron Pattern Accent (Estratégico no Dark Mode) */}
+      <div className="methodology-brand-pattern-bg" aria-hidden="true" />
+
       <div className="methodology-container-light">
         
         {/* Header Centralizado (Headline + Subheadline) */}
