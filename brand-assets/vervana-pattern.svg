@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 953.44 755.88" preserveAspectRatio="xMidYMid slice">
+  <title>Pattern Vervana — chevron alternado</title>
+  <!--
+    Geometria fiel ao brand book (pág. 60):
+      chevron: 180.078 x 114.453
+      passo horizontal: 95.34375
+      passo vertical:  125.98047
+      fileiras alternam espelhamento horizontal (avanço / retorno)
+    Cor padrão: Lounge Lizard #9AFF1C. Trocar via `fill` no <g>.
+  -->
+  <defs>
+    <pattern id="vv-chevron" x="0" y="0" width="95.34375" height="251.96094" patternUnits="userSpaceOnUse">
+      <g fill="#9AFF1C">
+        <!-- fileira A — avanço -->
+        <g transform="translate(0 0)">
+          <path d="M94.176 114.453 L59.102 64.219 L180.078 0 L0 64.219 Z" transform="translate(-190.6875 0)"/>
+          <path d="M94.176 114.453 L59.102 64.219 L180.078 0 L0 64.219 Z" transform="translate(-95.34375 0)"/>
+          <path d="M94.176 114.453 L59.102 64.219 L180.078 0 L0 64.219 Z"/>
+        </g>
+        <!-- fileira B — retorno (espelhada) -->
+        <g transform="translate(0 125.98047)">
+          <path d="M85.902 114.453 L120.977 64.219 L0 0 L180.078 64.219 Z" transform="translate(-190.6875 0)"/>
+          <path d="M85.902 114.453 L120.977 64.219 L0 0 L180.078 64.219 Z" transform="translate(-95.34375 0)"/>
+          <path d="M85.902 114.453 L120.977 64.219 L0 0 L180.078 64.219 Z"/>
+        </g>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#vv-chevron)"/>
+</svg>

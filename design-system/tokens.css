@@ -1,0 +1,347 @@
+/* ============================================================
+   VERVANA — DESIGN TOKENS
+   Fonte de verdade: docs/BRAND-SYSTEM.md + docs/03-DESIGN-SYSTEM.md
+   Atualizado: 2026-08-07
+
+   Arquitetura em 3 camadas:
+     1. primitivo  (--vv-lime-500)   — valores do brand book, nunca usados direto
+     2. semântico  (--vv-accent)     — troca entre temas, é o que o componente usa
+     3. componente (--vv-btn-*)      — só quando o semântico não basta
+
+   Escalas fluidas calculadas entre 375px e 1440px de viewport.
+   ============================================================ */
+
+:root {
+  /* ---------- 1. PRIMITIVOS · COR ---------- */
+
+  /* Lounge Lizard — cor de ação */
+  --vv-lime-100: #ebffcc;
+  --vv-lime-200: #d8ff99;
+  --vv-lime-300: #c4ff66;
+  --vv-lime-400: #b1ff33;
+  --vv-lime-500: #9aff1c; /* base oficial */
+  --vv-lime-600: #7ecc00;
+
+  /* Beetle Wing — cor estrutural */
+  --vv-beetle-100: #ccf8ff;
+  --vv-beetle-300: #00b1cc;
+  --vv-beetle-700: #008599;
+  --vv-beetle-800: #005866;
+  --vv-beetle-900: #003740; /* base oficial */
+  --vv-beetle-950: #001f24;
+
+  /* Ink — família Black 6C */
+  --vv-ink-500: #4a5b6d;
+  --vv-ink-700: #253242;
+  --vv-ink-800: #1a2332;
+  --vv-ink-850: #101820; /* Black 6C — fundo padrão da marca */
+  --vv-ink-900: #0a0f16;
+  --vv-ink-950: #030303; /* Black C */
+
+  /* Neutros */
+  --vv-gray-100: #e6e6e6;
+  --vv-gray-200: #cccccc;
+  --vv-gray-300: #b3b3b3;
+  --vv-gray-400: #999999;
+  --vv-briliance: #fefefe;
+
+  /* Funcionais — extensões fora do brand book, ver 11-DECISION-LOG.md */
+  --vv-red-500: #ff5a47;
+  --vv-amber-500: #ffb020;
+
+  /* ---------- 1. PRIMITIVOS · TIPOGRAFIA ---------- */
+  --vv-font-display: "Space Grotesk", "Space Grotesk Fallback", system-ui, sans-serif;
+  --vv-font-body: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --vv-font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+
+  /* ---------- 2. SEMÂNTICO · TIPOGRAFIA ---------- */
+  --type-display-xl: clamp(3.25rem, 1.93rem + 5.63vw, 7rem);
+  --type-display: clamp(2.75rem, 1.96rem + 3.38vw, 5rem);
+  --type-h1: clamp(2.25rem, 1.81rem + 1.88vw, 3.5rem);
+  --type-h2: clamp(1.75rem, 1.4rem + 1.5vw, 2.75rem);
+  --type-h3: clamp(1.375rem, 1.24rem + 0.56vw, 1.75rem);
+  --type-h4: clamp(1.125rem, 1.08rem + 0.19vw, 1.25rem);
+  --type-lead: clamp(1.125rem, 1.04rem + 0.38vw, 1.375rem);
+  --type-body: 1rem;
+  --type-body-sm: 0.875rem;
+  --type-label: 0.875rem;
+  --type-caption: 0.8125rem;
+  --type-mono: 0.875rem;
+  --type-eyebrow: 0.75rem;
+
+  --lh-display-xl: 0.94;
+  --lh-display: 1;
+  --lh-h1: 1.06;
+  --lh-h2: 1.14;
+  --lh-h3: 1.25;
+  --lh-h4: 1.35;
+  --lh-lead: 1.55;
+  --lh-body: 1.65;
+  --lh-tight: 1.4;
+
+  --track-display-xl: -0.035em;
+  --track-display: -0.03em;
+  --track-h1: -0.022em;
+  --track-h2: -0.018em;
+  --track-h3: -0.012em;
+  --track-h4: -0.006em;
+  --track-normal: 0;
+  --track-eyebrow: 0.14em;
+
+  --measure: 65ch;
+  --measure-prose: 68ch;
+  --measure-display: 20ch;
+
+  /* ---------- 2. SEMÂNTICO · ESPAÇAMENTO ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --space-11: 10rem;
+  --space-section: clamp(5rem, 3.24rem + 7.51vw, 10rem);
+  --space-section-tight: clamp(3rem, 1.94rem + 4.51vw, 6rem);
+
+  /* ---------- 2. SEMÂNTICO · LAYOUT ---------- */
+  --container-prose: 45rem; /* 720px */
+  --container-content: 73.75rem; /* 1180px */
+  --container-wide: 90rem; /* 1440px */
+  --gutter: clamp(1rem, 2vw, 2rem);
+  --page-margin: clamp(1.25rem, 5vw, 5rem);
+
+  /* ---------- 2. SEMÂNTICO · FORMA ---------- */
+  --radius-none: 0;
+  --radius-xs: 2px;
+  --radius-pill: 999px;
+
+  /* ---------- 2. SEMÂNTICO · MOTION ---------- */
+  --dur-instant: 100ms;
+  --dur-fast: 180ms;
+  --dur-base: 280ms;
+  --dur-slow: 480ms;
+  --dur-cinematic: 900ms;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-sharp: cubic-bezier(0.4, 0, 0, 1);
+
+  --stagger: 60ms;
+  --enter-x: -12px;
+  --enter-y: 16px;
+
+  /* ---------- PATTERN ---------- */
+  --pattern-chevron-w: 180.078;
+  --pattern-chevron-h: 114.453;
+  --pattern-step-x: 95.34375;
+  --pattern-step-y: 125.98047;
+  --pattern-opacity: 0.1;
+}
+
+/* ============================================================
+   TEMA ESCURO — PADRÃO DA MARCA
+   Proporção alvo: Black C 45% · Black 6C 25% · Beetle 18% · Lime 7% · Briliance 5%
+   ============================================================ */
+
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --vv-bg: var(--vv-ink-850);
+  --vv-bg-sunken: var(--vv-ink-900);
+  --vv-bg-max: var(--vv-ink-950);
+  --vv-surface: var(--vv-ink-800);
+  --vv-surface-brand: var(--vv-beetle-900);
+
+  --vv-border: var(--vv-ink-700);
+  --vv-border-strong: var(--vv-ink-500);
+
+  --vv-text: var(--vv-briliance); /* 17.7:1 */
+  --vv-text-secondary: var(--vv-gray-300); /* 8.5:1 */
+  --vv-text-muted: var(--vv-gray-400); /* 6.3:1 */
+  --vv-text-disabled: var(--vv-ink-500);
+  --vv-text-on-brand: var(--vv-briliance); /* sobre surface-brand: 12.9:1 */
+
+  --vv-accent: var(--vv-lime-500); /* 14.2:1 — texto E preenchimento */
+  --vv-accent-hover: var(--vv-lime-400);
+  --vv-accent-fill: var(--vv-lime-500);
+  --vv-accent-fg: var(--vv-ink-850); /* sobre lime: 14.2:1 */
+  --vv-accent-soft: rgba(154, 255, 28, 0.12);
+
+  --vv-info: var(--vv-beetle-300); /* 7.0:1 */
+  --vv-danger: var(--vv-red-500); /* 5.8:1 */
+  --vv-warning: var(--vv-amber-500); /* 9.8:1 */
+  --vv-success: var(--vv-lime-400);
+
+  /* Elevação por superfície + borda. Sombra difusa não lê sobre #101820. */
+  --elev-1-bg: var(--vv-surface);
+  --elev-1-border: 1px solid var(--vv-border);
+  --elev-1-shadow: none;
+  --elev-2-border: 1px solid var(--vv-border-strong);
+  --elev-overlay-bg: var(--vv-bg-max);
+  --elev-overlay-shadow: 0 24px 64px -16px rgba(0, 0, 0, 0.72);
+  --glow-accent: 0 0 28px -8px rgba(154, 255, 28, 0.42);
+
+  --focus-ring: 0 0 0 2px var(--vv-bg), 0 0 0 4px var(--vv-accent);
+}
+
+/* ============================================================
+   TEMA CLARO — ALTERNATIVO
+   Proporção alvo: Briliance 50% · Gray100 15% · Beetle 15% · Black6C 12% · BlackC 5% · Lime 3%
+
+   INVERSÃO CRÍTICA: no claro, `accent` de TEXTO vira Beetle Wing.
+   Lounge Lizard sobre branco dá 1.25:1 — nunca é texto aqui.
+   ============================================================ */
+
+[data-theme="light"] {
+  color-scheme: light;
+
+  --vv-bg: var(--vv-briliance);
+  --vv-bg-sunken: var(--vv-gray-100);
+  --vv-bg-max: #ffffff;
+  --vv-surface: #ffffff;
+  --vv-surface-brand: var(--vv-beetle-900);
+
+  --vv-border: var(--vv-gray-200);
+  --vv-border-strong: #a3adb8;
+
+  --vv-text: var(--vv-ink-850); /* 17.7:1 */
+  --vv-text-secondary: var(--vv-ink-500); /* 6.9:1 */
+  --vv-text-muted: #616f7d; /* 5.1:1 */
+  --vv-text-disabled: #a3adb8;
+  --vv-text-on-brand: var(--vv-briliance);
+
+  --vv-accent: var(--vv-beetle-900); /* 12.9:1 — TEXTO e link */
+  --vv-accent-hover: var(--vv-beetle-800);
+  --vv-accent-fill: var(--vv-lime-500); /* preenchimento apenas */
+  --vv-accent-fg: var(--vv-ink-850); /* sobre lime: 14.2:1 */
+  --vv-accent-soft: rgba(0, 55, 64, 0.08);
+
+  --vv-info: var(--vv-beetle-700);
+  --vv-danger: #c62d1c;
+  --vv-warning: #8a5a00;
+  --vv-success: #4a7a00;
+
+  /* No claro a sombra volta a funcionar */
+  --elev-1-bg: var(--vv-surface);
+  --elev-1-border: 1px solid var(--vv-border);
+  --elev-1-shadow: 0 1px 2px rgba(16, 24, 32, 0.06);
+  --elev-2-border: 1px solid var(--vv-border-strong);
+  --elev-overlay-bg: #ffffff;
+  --elev-overlay-shadow: 0 8px 24px -8px rgba(16, 24, 32, 0.12);
+  --glow-accent: none;
+
+  --focus-ring: 0 0 0 2px var(--vv-bg), 0 0 0 4px var(--vv-accent);
+}
+
+/* Respeita a preferência do sistema quando o usuário não escolheu explicitamente.
+   O escuro é o padrão da marca, então só o claro precisa ser ativado. */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --vv-bg: var(--vv-briliance);
+    --vv-bg-sunken: var(--vv-gray-100);
+    --vv-bg-max: #ffffff;
+    --vv-surface: #ffffff;
+    --vv-border: var(--vv-gray-200);
+    --vv-border-strong: #a3adb8;
+    --vv-text: var(--vv-ink-850);
+    --vv-text-secondary: var(--vv-ink-500);
+    --vv-text-muted: #616f7d;
+    --vv-text-disabled: #a3adb8;
+    --vv-accent: var(--vv-beetle-900);
+    --vv-accent-hover: var(--vv-beetle-800);
+    --vv-accent-fill: var(--vv-lime-500);
+    --vv-accent-soft: rgba(0, 55, 64, 0.08);
+    --vv-info: var(--vv-beetle-700);
+    --vv-danger: #c62d1c;
+    --vv-warning: #8a5a00;
+    --vv-success: #4a7a00;
+    --elev-1-shadow: 0 1px 2px rgba(16, 24, 32, 0.06);
+    --elev-overlay-bg: #ffffff;
+    --elev-overlay-shadow: 0 8px 24px -8px rgba(16, 24, 32, 0.12);
+    --glow-accent: none;
+  }
+}
+
+/* ============================================================
+   PRIMITIVAS DE TEXTO
+   ============================================================ */
+
+.vv-display-xl {
+  font-family: var(--vv-font-display);
+  font-weight: 500;
+  font-size: var(--type-display-xl);
+  line-height: var(--lh-display-xl);
+  letter-spacing: var(--track-display-xl);
+  max-width: var(--measure-display);
+  text-wrap: balance;
+}
+
+.vv-h2 {
+  font-family: var(--vv-font-display);
+  font-weight: 500;
+  font-size: var(--type-h2);
+  line-height: var(--lh-h2);
+  letter-spacing: var(--track-h2);
+  text-wrap: balance;
+}
+
+.vv-body {
+  font-family: var(--vv-font-body);
+  font-weight: 400;
+  font-size: var(--type-body);
+  line-height: var(--lh-body);
+  max-width: var(--measure);
+}
+
+/* Eyebrow: mono + caixa alta EXIGE o tracking. Sem ele fica ilegível. */
+.vv-eyebrow {
+  font-family: var(--vv-font-mono);
+  font-weight: 500;
+  font-size: var(--type-eyebrow);
+  line-height: 1.3;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  color: var(--vv-accent);
+}
+
+/* Todo número de dado usa mono tabular */
+.vv-num {
+  font-family: var(--vv-font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   MOVIMENTO REDUZIDO
+   Conteúdo permanece 100% acessível — nada existe só depois da animação.
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  :root {
+    --enter-x: 0px;
+    --enter-y: 0px;
+    --dur-cinematic: 100ms;
+  }
+}
+
+/* ============================================================
+   FOCO — nunca removido
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--vv-accent);
+  outline-offset: 2px;
+}

@@ -1,0 +1,26 @@
+# Sistema operacional (macOS)
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Editores
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.sw?
+
+# Logs
+*.log
+
+# Dependências, caso o projeto passe a usar npm
+node_modules
+dist
+
+# Zips e temporários
+code text.zip
+code_text_extracted/
+.claude/
+.maestri/
+
+.vercel
