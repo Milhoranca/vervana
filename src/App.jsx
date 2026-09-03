@@ -13,6 +13,7 @@ import { CaseStudiesSection } from './components/CaseStudiesSection';
 import { FinalCTASection } from './components/FinalCTASection';
 import { Footer } from './components/Footer';
 import { VervanaLogo3D } from './components/VervanaLogo3D';
+import { Preloader } from './components/Preloader';
 
 export default function App() {
   useEffect(() => {
@@ -49,6 +50,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <I18nProvider>
+        <Preloader />
         <div className="app">
           <Header />
 

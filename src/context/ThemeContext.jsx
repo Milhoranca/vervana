@@ -5,9 +5,9 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(() => {
     try {
-      return localStorage.getItem('vv-theme') || 'light';
+      return localStorage.getItem('vv-theme') || 'dark';
     } catch (e) {
-      return 'light';
+      return 'dark';
     }
   });
 
