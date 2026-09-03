@@ -4458,9 +4458,9 @@ p {
 }
 
 /* ==========================================================================
-   BASIC AGENCY STYLE EDITORIAL PRELOADER (Adapted for Vervana)
+   JAMS BASIC AGENCY STYLE PURE WHITE EDITORIAL PRELOADER (Vervana Edition)
    ========================================================================== */
-.basic-preloader-root {
+.jams-preloader-root {
   position: fixed;
   inset: 0;
   width: 100vw;
@@ -4470,165 +4470,150 @@ p {
   overflow: hidden;
 }
 
-.basic-preloader-panel {
+.jams-preloader-panel {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  background: #020607;
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(24px, 4vw, 48px);
+  padding: clamp(24px, 4vw, 44px);
   box-sizing: border-box;
-  color: #FEFEFE;
+  color: #101820;
   transition: transform 900ms cubic-bezier(0.85, 0, 0.15, 1);
   will-change: transform;
 }
 
-.basic-preloader-root.is-complete .basic-preloader-panel {
+.jams-preloader-root.is-complete .jams-preloader-panel {
   transform: translateY(-100%);
   pointer-events: none;
 }
 
-/* Frame Top */
-.preloader-frame-top {
+/* Top Minimal Bar */
+.jams-preloader-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding-bottom: 20px;
 }
 
-.preloader-tag {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.preloader-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #9AFF1C;
-  box-shadow: 0 0 8px #9AFF1C;
-  animation: preloaderDotBlink 1.2s ease-in-out infinite alternate;
-}
-
-@keyframes preloaderDotBlink {
-  0% { opacity: 0.3; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1.1); }
-}
-
-.mono-label {
+.jams-mono-tag {
   font-family: var(--vv-font-mono, 'IBM Plex Mono', monospace);
-  font-size: 0.72rem;
+  font-size: clamp(0.68rem, 0.9vw, 0.78rem);
+  font-weight: 500;
   letter-spacing: 0.08em;
-  color: #94A3B8;
+  color: #64748B;
   text-transform: uppercase;
 }
 
-/* Centerpiece */
-.preloader-center-content {
+/* Center: JAMS Brand Title & Badge */
+.jams-preloader-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+  gap: 16px;
   margin: auto 0;
 }
 
-.preloader-chevron-symbol {
-  width: clamp(64px, 8vw, 96px);
-  height: auto;
-  filter: drop-shadow(0 0 28px rgba(154, 255, 28, 0.35));
+.jams-brand-title {
+  font-family: var(--vv-font-display, 'Space Grotesk', sans-serif);
+  font-size: clamp(3.2rem, 9.5vw, 8rem);
+  font-weight: 700;
+  color: #101820;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  margin: 0;
+  text-align: center;
 }
 
-.preloader-symbol-svg {
+.jams-badge-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #F1F5F9;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.jams-symbol-box {
+  width: 16px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jams-chevron-icon {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
-.preloader-center-title {
-  font-family: var(--vv-font-display, 'Space Grotesk', sans-serif);
-  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  color: #FEFEFE;
+.jams-tag-pill {
+  font-family: var(--vv-font-mono, 'IBM Plex Mono', monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #003740;
+  letter-spacing: 0.04em;
 }
 
-/* Frame Bottom */
-.preloader-frame-bottom {
+.jams-counter-pill {
+  font-family: var(--vv-font-mono, 'IBM Plex Mono', monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #003740;
+  background: #9AFF1C;
+  padding: 2px 6px;
+  border-radius: 9999px;
+}
+
+/* Bottom Editorial Grid */
+.jams-preloader-bottom {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 24px;
-}
-
-.preloader-footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.mono-sublabel {
-  font-family: var(--vv-font-body, 'Inter', sans-serif);
-  font-size: 0.85rem;
-  color: #94A3B8;
-}
-
-.mono-index {
   font-family: var(--vv-font-mono, 'IBM Plex Mono', monospace);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  color: #003740;
-  background: #9AFF1C;
-  padding: 2px 6px;
-  border-radius: 2px;
-  width: fit-content;
-  font-weight: 700;
+  font-size: clamp(0.66rem, 0.85vw, 0.76rem);
+  color: #64748B;
+  letter-spacing: 0.06em;
 }
 
-/* Massive Typographic Counter */
-.preloader-massive-counter {
-  display: flex;
-  align-items: baseline;
-  font-family: var(--vv-font-display, 'Space Grotesk', sans-serif);
-  line-height: 0.85;
+.jams-bottom-left {
+  flex: 1;
+  text-align: left;
 }
 
-.counter-digits {
-  font-size: clamp(3.8rem, 11vw, 9rem);
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  color: #FEFEFE;
+.jams-bottom-center {
+  flex: 2;
+  text-align: center;
+  font-weight: 500;
 }
 
-.counter-percent {
-  font-size: clamp(1.4rem, 3.2vw, 3rem);
+.jams-bottom-right {
+  flex: 1;
+  text-align: right;
   font-weight: 600;
-  color: #9AFF1C;
-  margin-left: 4px;
+  color: #101820;
 }
 
-/* Edge Progress Line */
-.preloader-edge-progress {
+/* Bottom Edge Minimal Progress Line */
+.jams-edge-progress {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 3px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.04);
 }
 
-.preloader-edge-fill {
+.jams-edge-fill {
   height: 100%;
-  background: #9AFF1C;
-  box-shadow: 0 0 12px #9AFF1C;
+  background: #003740;
   transition: width 40ms linear;
 }
 

@@ -9,9 +9,8 @@ export const Preloader = () => {
 
   useEffect(() => {
     let current = 0;
-    // Step progression inspired by Basic/Dept
     const timer = setInterval(() => {
-      current += Math.floor(Math.random() * 12) + 4;
+      current += Math.floor(Math.random() * 14) + 6;
       if (current >= 100) {
         current = 100;
         setCount(100);
@@ -21,11 +20,11 @@ export const Preloader = () => {
           setTimeout(() => {
             setIsRemoved(true);
           }, 950);
-        }, 300);
+        }, 320);
       } else {
         setCount(current);
       }
-    }, 38);
+    }, 40);
 
     return () => clearInterval(timer);
   }, []);
@@ -36,65 +35,60 @@ export const Preloader = () => {
 
   return (
     <div 
-      className={`basic-preloader-root ${isDone ? 'is-complete' : ''}`}
+      className={`jams-preloader-root ${isDone ? 'is-complete' : ''}`}
       aria-hidden="true"
     >
-      {/* Curtain Layer (Basic/Dept style shutter) */}
-      <div className="basic-preloader-panel">
+      <div className="jams-preloader-panel">
         
-        {/* Frame Top Header */}
-        <div className="preloader-frame-top">
-          <div className="preloader-tag">
-            <span className="preloader-dot" />
-            <span className="mono-label">VERVANA™ / LATAM TO US</span>
-          </div>
-          <div className="preloader-tag">
-            <span className="mono-label">
-              {count < 100 
-                ? (locale === 'pt' ? 'CARREGANDO SISTEMA' : 'INITIALIZING PLATFORM') 
-                : (locale === 'pt' ? 'SISTEMA PRONTO' : 'SYSTEM ONLINE')}
-            </span>
+        {/* Top Minimal Bar */}
+        <div className="jams-preloader-top">
+          <span className="jams-mono-tag">VERVANA / EDITION 2026</span>
+          <span className="jams-mono-tag">
+            {count < 100 
+              ? (locale === 'pt' ? 'CARREGANDO' : 'LOADING')
+              : (locale === 'pt' ? 'PRONTO' : 'READY')}
+          </span>
+        </div>
+
+        {/* Center: Iconic JAMS Style Typographic Signature */}
+        <div className="jams-preloader-center">
+          <h1 className="jams-brand-title">VERVANA</h1>
+          
+          <div className="jams-badge-row">
+            <div className="jams-symbol-box">
+              <svg viewBox="0 0 220.215 179.149" className="jams-chevron-icon">
+                <path 
+                  fill="#003740" 
+                  d="M36.352 65.566 L132.504 116.859 L96.695 65.566 L220.215 0 L145.148 179.148 L0 65.773 L220.215 0 Z"
+                />
+              </svg>
+            </div>
+            <span className="jams-tag-pill">LATAM ➔ US</span>
+            <span className="jams-counter-pill">{formattedCount}%</span>
           </div>
         </div>
 
-        {/* Centerpiece: Subtle Brand Monogram */}
-        <div className="preloader-center-content">
-          <div className="preloader-chevron-symbol">
-            <svg viewBox="0 0 220.215 179.149" className="preloader-symbol-svg">
-              <path 
-                fill="#003740" 
-                stroke="#9AFF1C"
-                strokeWidth="2"
-                d="M36.352 65.566 L132.504 116.859 L96.695 65.566 L220.215 0 L145.148 179.148 L0 65.773 L220.215 0 Z"
-              />
-            </svg>
+        {/* Bottom Editorial Grid */}
+        <div className="jams-preloader-bottom">
+          <div className="jams-bottom-left">
+            <span>(V-001)</span>
           </div>
-          <div className="preloader-center-title">
-            <span>VERVANA</span>
-          </div>
-        </div>
-
-        {/* Frame Bottom: Massive Typographic Counter (Basic Agency Signature) */}
-        <div className="preloader-frame-bottom">
-          <div className="preloader-footer-left">
-            <span className="mono-sublabel">
+          <div className="jams-bottom-center">
+            <span>
               {locale === 'pt' 
-                ? 'Curadoria de Engenharia de Software' 
-                : 'Curated Software Engineering'}
+                ? 'CURADORIA DE ENGENHARIA DE SOFTWARE' 
+                : 'CURATED SOFTWARE ENGINEERING PLATFORM'}
             </span>
-            <span className="mono-index">EST. 2026</span>
           </div>
-
-          <div className="preloader-massive-counter">
-            <span className="counter-digits">{formattedCount}</span>
-            <span className="counter-percent">%</span>
+          <div className="jams-bottom-right">
+            <span>{formattedCount}%</span>
           </div>
         </div>
 
-        {/* Progress Line on Edge */}
-        <div className="preloader-edge-progress">
+        {/* Bottom Edge Minimal Progress Line */}
+        <div className="jams-edge-progress">
           <div 
-            className="preloader-edge-fill" 
+            className="jams-edge-fill" 
             style={{ width: `${count}%` }} 
           />
         </div>
