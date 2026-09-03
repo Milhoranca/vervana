@@ -2437,8 +2437,8 @@ p {
 }
 
 :root[data-theme="dark"] .methodology-card-light:hover {
-  border-color: rgba(154, 255, 28, 0.35);
-  box-shadow: 0 20px 44px -8px rgba(0, 55, 64, 0.6), 0 0 20px rgba(154, 255, 28, 0.12);
+  border-color: rgba(254, 254, 254, 0.12);
+  box-shadow: 0 24px 48px -10px rgba(0, 0, 0, 0.75);
 }
 
 :root[data-theme="dark"] .card-icon-box-light {
