@@ -13,7 +13,6 @@ import { CaseStudiesSection } from './components/CaseStudiesSection';
 import { FinalCTASection } from './components/FinalCTASection';
 import { Footer } from './components/Footer';
 import { VervanaLogo3D } from './components/VervanaLogo3D';
-import { DetroitParisTransition } from './components/DetroitParisTransition';
 
 export default function App() {
   useEffect(() => {
@@ -50,7 +49,6 @@ export default function App() {
   return (
     <ThemeProvider>
       <I18nProvider>
-        <DetroitParisTransition />
         <div className="app">
           <Header />
 
